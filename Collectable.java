@@ -1,31 +1,34 @@
 public class Collectable {
     // Add collectable properties here
-private String color;
-private int size;
+private String name;
+private String type;
+private int rating;
 private String condition;
 private double cost;
 private String rarity;
-private int value;
     // Add collectable constructors here
 Collectable(){
-    this.color="";
-    this.size=0;
+    this.name="";
+    this.type="";
+    this.rating=0;
     this.condition="";
     this.cost=0.0;
     this.rarity="";
-    this.value=0;
 }
-Collectable(String color, int size, String condition, double cost, String rarity, int value){
-    this.color=color;
-    this.size=size;
+Collectable(String name,String type, int rating, String condition, double cost, String rarity){
+    this.name=name;
+    this.type=type;
+    this.rating=rating;
     this.condition=condition;
     this.cost=cost;
     this.rarity=rarity;
-    this.value=value;
 }
     // Add collectable accessors and mutators here
-public String getColor() {
-    return this.color;
+public String getName() {
+    return this.name;
+}
+public String getType() {
+    return this.type;
 }
 public String getCondition() {
     return this.condition;
@@ -36,14 +39,14 @@ public double getCost() {
 public String getRarity() {
     return this.rarity;
 }
-public int getSize() {
-    return this.size;
+public int getRating() {
+    return this.rating;
 }
-public int getValue() {
-    return this.value;
+public void setName(String name){
+    this.name=name;
 }
-public void setColor(String color) {
-    this.color = color;
+public void setType(String type) {
+    this.type = type;
 }
 public void setCondition(String condition) {
     this.condition = condition;
@@ -54,15 +57,24 @@ public void setCost(double cost) {
 public void setRarity(String rarity) {
     this.rarity = rarity;
 }
-public void setSize(int size) {
-    this.size = size;
-}
-public void setValue(int value) {
-    this.value = value;
+public void setRating(int rating) {
+    this.rating = rating;
 }
     // Add any methods here
     public String toString() {
-        
-        return super.toString();
+    System.out.println("Name: "+this.name);
+    System.out.println("Type: "+this.type);
+    System.out.println("Condition: "+this.condition);
+    System.out.println("Cost: "+"$"+this.cost);
+    System.out.println("Rarity: "+this.rarity);
+    System.out.println("Rating: "+this.rating);
+        return "";
+    }
+    public boolean equals(Collectable c1,Collectable c2) {
+        boolean equal=false;
+        if(c1==c2){
+            equal=true;
+        }
+        return equal;
     }
 }
