@@ -72,7 +72,7 @@ public void setRating(int rating) {
     }
     public boolean equals(Collectable c1,Collectable c2) {
         boolean equal=false;
-        if(c1==c2){
+        if(c1.getCondition()==c2.getCondition()&&c1.getCost()==c2.getCost()&&c1.getName()==c2.getName()&&c1.getRarity()==c2.getRarity()&&c1.getRating()==c2.getRating()&&c1.getType()==c2.getType()){
             equal=true;
         }
         return equal;
